@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header"
 import Homepage from "./pages/Homepage"
 import Blog from "./pages/Blog"
@@ -8,7 +8,7 @@ import Authors from "./pages/Authors"
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
     <Header />
     <Routes>
       <Route path="/" element={<Homepage />} exact />
@@ -18,7 +18,7 @@ function App() {
       <Route path="/authors" element={<Authors />} />
       <Route path="*" element={<Error />} />
     </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
