@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/capital-region-aggregate-press/static/css/main.ca8a64a8.css",
-    "main.js": "/capital-region-aggregate-press/static/js/main.595a63ad.js",
-    "static/js/796.f5fe30e1.chunk.js": "/capital-region-aggregate-press/static/js/796.f5fe30e1.chunk.js",
-    "static/js/165.173d369d.chunk.js": "/capital-region-aggregate-press/static/js/165.173d369d.chunk.js",
-    "static/js/453.99e677a0.chunk.js": "/capital-region-aggregate-press/static/js/453.99e677a0.chunk.js",
-    "index.html": "/capital-region-aggregate-press/index.html",
-    "main.ca8a64a8.css.map": "/capital-region-aggregate-press/static/css/main.ca8a64a8.css.map",
-    "main.595a63ad.js.map": "/capital-region-aggregate-press/static/js/main.595a63ad.js.map",
-    "796.f5fe30e1.chunk.js.map": "/capital-region-aggregate-press/static/js/796.f5fe30e1.chunk.js.map",
-    "165.173d369d.chunk.js.map": "/capital-region-aggregate-press/static/js/165.173d369d.chunk.js.map",
-    "453.99e677a0.chunk.js.map": "/capital-region-aggregate-press/static/js/453.99e677a0.chunk.js.map"
+    "main.css": "/Capital-Region-Aggregate-Press/static/css/main.ca8a64a8.css",
+    "main.js": "/Capital-Region-Aggregate-Press/static/js/main.faf635ad.js",
+    "static/js/796.f5fe30e1.chunk.js": "/Capital-Region-Aggregate-Press/static/js/796.f5fe30e1.chunk.js",
+    "static/js/165.173d369d.chunk.js": "/Capital-Region-Aggregate-Press/static/js/165.173d369d.chunk.js",
+    "static/js/453.99e677a0.chunk.js": "/Capital-Region-Aggregate-Press/static/js/453.99e677a0.chunk.js",
+    "index.html": "/Capital-Region-Aggregate-Press/index.html",
+    "main.ca8a64a8.css.map": "/Capital-Region-Aggregate-Press/static/css/main.ca8a64a8.css.map",
+    "main.faf635ad.js.map": "/Capital-Region-Aggregate-Press/static/js/main.faf635ad.js.map",
+    "796.f5fe30e1.chunk.js.map": "/Capital-Region-Aggregate-Press/static/js/796.f5fe30e1.chunk.js.map",
+    "165.173d369d.chunk.js.map": "/Capital-Region-Aggregate-Press/static/js/165.173d369d.chunk.js.map",
+    "453.99e677a0.chunk.js.map": "/Capital-Region-Aggregate-Press/static/js/453.99e677a0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca8a64a8.css",
-    "static/js/main.595a63ad.js"
+    "static/js/main.faf635ad.js"
   ]
 }
