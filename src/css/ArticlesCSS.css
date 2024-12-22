@@ -13,13 +13,30 @@
 }
 
 #ArticleArea article img {
-    width: 400px;
+    object-fit: cover;
+    width: 100%;
 }
 
 #ArticleArea article h4 {
     font-size: 24px;
+    padding: 5px;
+    margin-bottom: 0px;
 }
 
 h1 {
     margin: 10px;
+}
+
+.Categories {
+    display: inline-block;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+}
+
+.Categories li {
+    list-style-type: none;
+    color: blue;
+    font-weight: bold;
+    font-weight: 20px;
 }

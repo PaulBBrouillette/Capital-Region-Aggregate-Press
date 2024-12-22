@@ -79,14 +79,12 @@ export default function Articles() {
           {posts.map((post) => (
             <article key={post.slug.current}>
               <Link to={`/articles/${post.slug.current}`}><img src={post.mainImage.asset.url} alt={post.title} /></Link>
-              
-              <h4>{post.title}</h4>
               {post.categories !== null && (
-                <ul>
+                <ul className="Categories">
                   {post.categories.map((category, index) => (<li key={index}>{category.title}</li>))}
                 </ul>
               )}
-              <Link to={`/articles/${post.slug.current}`}>Read Full article</Link>
+              <h4>{post.title}</h4>
             </article>
           ))}
         </div>
