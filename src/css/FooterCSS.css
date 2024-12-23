@@ -12,7 +12,7 @@ footer img {
     width: 40%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     footer img {
         width: 75vw;
     }
