@@ -68,13 +68,10 @@ export default function Articles() {
     }
     return pages;
   };
-
+  console.log("Current page: " + currentPage + ", out of " + totalPages + " total pages");
   return (
     <div>
       <section>
-        <h1>Articles</h1>
-        <h2>You are viewing page {currentPage} of {totalPages}</h2>
-
         <div id="ArticleArea">
           {posts.map((post) => (
             <article key={post.slug.current}>

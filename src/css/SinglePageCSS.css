@@ -7,11 +7,6 @@ h1 {
     font-size: 42px;
 }
 
-h2 {
-    margin: 30px 25px;
-    font-size: 26px;
-}
-
 figure + p {
     text-align: center;
     margin-top: 0;
@@ -63,7 +58,7 @@ section {
     width: 25%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #ad-section {
         display: none;
     }

@@ -9,7 +9,7 @@ export default function SinglePost() {
   const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams();
 
-  console.log("Singlepost reeached");
+  console.log("Singlepost reached");
   // Fetch post data
   useEffect(() => {
     client.fetch(
