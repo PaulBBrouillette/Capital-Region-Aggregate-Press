@@ -4,4 +4,4 @@
 
 ### The app uses React for the frontend with API calls to Sanity CMS that stores data in the backend. 
 
-![Capital Region Aggregate Press Logo]("/public/images/logoblue.png")
+![Capital Region Aggregate Press Logo](/public/images/logoblue.png)
