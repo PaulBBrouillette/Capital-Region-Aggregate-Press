@@ -8,12 +8,15 @@ export default function Header() {
       <header>
         <nav id="NavBar" >
           <div id="Nav-Image">
-            <img src={process.env.PUBLIC_URL + "/images/logo8.png"} alt="CRAP logo" />
+          <NavLink to="/articles/page/1" className={({ isActive }) => (isActive ? 'active' : '')}><img src={process.env.PUBLIC_URL + "/images/logoblue.png"} alt="CRAP logo" /></NavLink>
           </div>
-          <div id="Nav-Links">
-            <ul>
-              <li><NavLink to="/articles/page/1" className={({ isActive }) => (isActive ? 'active' : '')}>Articles</NavLink></li>
-            </ul>
+          <div id="NavBar-Remainder">
+            <h2 id="NavBar-Title" style={{color: "white", textAlign: "center", fontSize: "3vw", fontFamily: "Poly"}}>
+              Capital Region Aggregate Press
+            </h2>
+            <h3 style={{fontSize: "2vw", fontFamily: "Poly", color: "white", textAlign: "center", padding: "10px"}}>
+              <span style={{fontStyle: "italic"}}>"The Capital Region's most reliable news site"</span> - Kathy Hochul
+            </h3>
           </div>
         </nav>
       </header>

@@ -84,7 +84,7 @@ export default function Articles() {
                   {post.categories.map((category, index) => (<li key={index}>{category.title}</li>))}
                 </ul>
               )}
-              <h4>{post.title}</h4>
+              <h3>{post.title}</h3>
             </article>
           ))}
         </div>

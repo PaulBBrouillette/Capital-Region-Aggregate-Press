@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Articles from "./components/Articles"
 import SinglePost from "./components/SinglePost"
 import Error from "./components/Error"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/articles" element={<Articles />} />
       <Route path="*" element={<Error />} />
     </Routes>
+    <Footer />
     </Router>
   );
 }
