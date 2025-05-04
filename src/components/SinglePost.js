@@ -15,6 +15,7 @@ export default function SinglePost() {
     client.fetch(
       `*[slug.current == "${slug}"] {
         title,
+        publishedAt,
         body,
         mainImage {
           asset -> {
@@ -47,12 +48,22 @@ export default function SinglePost() {
             <div id="main-content">
               <div id="main-title-image">
                 <h1>{singlePost.title}</h1>
+                <p id="author">By {singlePost.name}</p>
+                <p id="date">
+                  {singlePost && new Date(singlePost.publishedAt).toLocaleString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit",
+                    hour12: true
+                  })}
+                </p>
                 {singlePost.mainImage && singlePost.mainImage.asset && (
                   <img src={singlePost.mainImage.asset.url} alt={singlePost.title} title={singlePost.title} />
                 )}
               </div>
               <div id="main-blurb-paragraphs">
-                <p>By {singlePost.name}</p>
                 <BlockContent blocks={singlePost.body} projectId="xw4897mg" dataset="production" />
               </div>
             </div>

@@ -130,7 +130,7 @@ export default function Articles() {
         </div>
 
         {/* Pagination menu */}
-        <div className="pagination" style={{ marginTop: '20px', textAlign: 'center' }}>
+        <div className="pagination" style={{ margin: '20px 5px 5px', textAlign: 'center' }}>
           {renderPaginationLinks()}
         </div>
       </section>

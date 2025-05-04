@@ -58,7 +58,19 @@ section {
     width: 25%;
 }
 
+#date {
+    margin: 0 auto;
+}
+
+#author {
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+    
     #ad-section {
         display: none;
     }
