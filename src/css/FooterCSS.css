@@ -4,7 +4,7 @@ footer {
     margin: 0 auto;
     bottom: 0;
     left: 0;
-    background: rgb(251, 80, 18);
+    background: var(--Albany-Orange);
     height: auto;
 }
 
@@ -16,4 +16,9 @@ footer img {
     footer img {
         width: 75vw;
     }
+}
+p {
+    margin: 2% 2% 0;
+    padding: 0 auto;
+    font-size: 20px;
 }

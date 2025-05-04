@@ -15,12 +15,14 @@
 #ArticleArea article img {
     object-fit: cover;
     width: 100%;
+    border-radius: 20px;
 }
 
 #ArticleArea article h3 {
     font-size: 24px;
     padding: 5px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 h1 {
@@ -39,6 +41,11 @@ h1 {
     color: blue;
     font-weight: bold;
     font-weight: 20px;
+}
+
+button {
+    font-family: "Baloo Paaji 2", sans-serif;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

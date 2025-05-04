@@ -1,3 +1,8 @@
+:root {
+    --Albany-Blue: rgb(0 56 132);
+    --Albany-Orange: rgb(251, 80, 18);
+}
+
 body {
     background-color: #eaeaea;
     margin: 0 auto;

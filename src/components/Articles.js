@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import client from "../client";
 import "../css/ArticlesCSS.css";
@@ -9,6 +9,7 @@ export default function Articles() {
   const { pageNumber } = useParams();  // Get page number from URL
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const postsPerPage = 6; // Number of posts per page
   const currentPage = pageNumber ? parseInt(pageNumber, 10) : 1; // Default to page 1 if no page number
@@ -33,15 +34,15 @@ export default function Articles() {
           "name": author -> name
         }`
       )
-      .then((data) => setPosts(data))
-      .catch(console.error);
+        .then((data) => setPosts(data))
+        .catch(console.error);
       setIsLoading(false);
     };
 
     loadPosts();
   }, [currentPage]);  // Re-fetch posts when the page changes
 
-   useEffect(() => {
+  useEffect(() => {
     if (!isLoading) {
     }
   }, [isLoading]);
@@ -56,9 +57,9 @@ export default function Articles() {
     const pages = [];
     for (let i = 1; i <= totalPages; i++) {
       pages.push(
-        <button 
-          key={i} 
-          onClick={() => handlePageChange(i)} 
+        <button
+          key={i}
+          onClick={() => handlePageChange(i)}
           className={i === currentPage ? 'active-page' : ''}
           style={{ margin: '0 10px', cursor: 'pointer', backgroundColor: i === currentPage ? 'lightblue' : 'white' }}
         >
@@ -69,16 +70,42 @@ export default function Articles() {
     return pages;
   };
   console.log("Current page: " + currentPage + ", out of " + totalPages + " total pages");
+  const filteredPosts = selectedCategory === "All"
+    ? posts
+    : posts.filter(post =>
+      post.categories && post.categories.some(cat => cat.title === selectedCategory)
+    );
   return (
     <div>
       <section>
+        <div className="category-filter" style={{ marginBottom: '20px', textAlign: 'center' }}>
+          {["All", "Local", "World", "Politics", "Life"].map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              style={{
+                margin: '0 10px',
+                padding: '5px 15px',
+                cursor: 'pointer',
+                backgroundColor: selectedCategory === category ? 'var(--Albany-Blue)' : 'white',
+                color: selectedCategory === category ? 'white' : 'black'
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
         <div id="ArticleArea">
-          {posts.map((post) => (
+          {filteredPosts.map((post) => (
             <article key={post.slug.current}>
-              <Link to={`/articles/${post.slug.current}`}><img src={post.mainImage.asset.url} alt={post.title} /></Link>
+              <Link to={`/articles/${post.slug.current}`}>
+                <img src={post.mainImage.asset.url} alt={post.title} />
+              </Link>
               {post.categories !== null && (
                 <ul className="Categories">
-                  {post.categories.map((category, index) => (<li key={index}>{category.title}</li>))}
+                  {post.categories.map((category, index) => (
+                    <li key={index}>{category.title}</li>
+                  ))}
                 </ul>
               )}
               <h3>{post.title}</h3>
