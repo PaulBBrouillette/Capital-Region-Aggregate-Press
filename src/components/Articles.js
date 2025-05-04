@@ -10,6 +10,13 @@ export default function Articles() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const categoryColors = {
+    All: "#28536B",
+    Local: "#A30015",
+    World: "#AED9E0",
+    Politics: "#AF4D98",
+    Life: "#F79F79"
+  };
 
   const postsPerPage = 6; // Number of posts per page
   const currentPage = pageNumber ? parseInt(pageNumber, 10) : 1; // Default to page 1 if no page number
@@ -87,7 +94,7 @@ export default function Articles() {
                 margin: '0 10px',
                 padding: '5px 15px',
                 cursor: 'pointer',
-                backgroundColor: selectedCategory === category ? 'var(--Albany-Blue)' : 'white',
+                backgroundColor: selectedCategory === category ? categoryColors[category] : 'white',
                 color: selectedCategory === category ? 'white' : 'black'
               }}
             >
@@ -104,7 +111,16 @@ export default function Articles() {
               {post.categories !== null && (
                 <ul className="Categories">
                   {post.categories.map((category, index) => (
-                    <li key={index}>{category.title}</li>
+                    <li key={index} 
+                      style={{
+                        display: 'inline-block',
+                        margin: '3px',
+                        padding: '2px 6px',
+                        borderRadius: '4px',
+                        backgroundColor: categoryColors[category.title] || '#eee',
+                        color: 'white',
+                        fontWeight: 'bold',
+                    }}>{category.title}</li>
                   ))}
                 </ul>
               )}
