@@ -5,7 +5,7 @@
   "private": false,
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
-    "@sanity/client": "^6.22.2",
+    "@sanity/client": "^6.29.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -18,10 +18,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-scripts build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && node generateReactSnapRoutes.js",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
