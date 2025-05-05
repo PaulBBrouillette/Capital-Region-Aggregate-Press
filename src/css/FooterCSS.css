@@ -6,25 +6,32 @@ footer {
     left: 0;
     background: var(--Albany-Orange);
     height: auto;
+    margin-top: 10px;
 }
 
 footer img {
     width: 40%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 p {
+    margin: 2% 2% 0;
     padding: 0 auto;
-    font-size: 16px;
+    font-size: 20px;
+}
+
+#copyright {
     margin: auto;
-    width: 75%;
+    width: 50%;
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
     footer img {
         width: 75vw;
     }
-    p {
+
+    #copyright {
         font-size: 12px;
     }
 }

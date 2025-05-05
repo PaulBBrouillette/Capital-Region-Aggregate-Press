@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <footer>
                 <img src={process.env.PUBLIC_URL + "/images/logoorange.png"} alt="CRAP logo" />
-                <p>&copy; Capital Region Aggregate Press. All Rights Reserved. Just kidding, you think we have this shit copyrighted?</p>
+                <p id="copyright">&copy; Capital Region Aggregate Press. All Rights Reserved. Just kidding, you think we have this shit copyrighted?</p>
             </footer>
         </>
     )
