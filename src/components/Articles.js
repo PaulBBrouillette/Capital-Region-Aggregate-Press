@@ -91,7 +91,7 @@ export default function Articles() {
               key={category}
               onClick={() => setSelectedCategory(category)}
               style={{
-                margin: '0 10px',
+                margin: '5px',
                 padding: '5px 15px',
                 cursor: 'pointer',
                 backgroundColor: selectedCategory === category ? categoryColors[category] : 'white',
