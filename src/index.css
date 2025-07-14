@@ -1,13 +1,18 @@
 :root {
     --Albany-Blue: #003884;
     --Albany-Orange: #fb5012;
+    --Article-BackgroundColor: #eaeaea39;
 }
 
 body {
     background-color: #eaeaea;
     margin: 0 auto;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 html {
-    font-family: "Baloo Paaji 2", sans-serif;
+    font-family: Helvetica, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }

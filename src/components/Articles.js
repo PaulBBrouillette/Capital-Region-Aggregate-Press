@@ -2,8 +2,12 @@ import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import client from "../client";
 import "../css/ArticlesCSS.css";
+import img1 from '../assets/Ads/ToeAd.jpg';
+import img2 from '../assets/Ads/HotSinglesAd.jpg';
+import img3 from '../assets/Ads/EggAd.jpg';
 
 export default function Articles() {
+  const allImages = [img1, img2, img3];
   const [posts, setPosts] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const { pageNumber } = useParams();  // Get page number from URL
@@ -82,6 +86,13 @@ export default function Articles() {
     : posts.filter(post =>
       post.categories && post.categories.some(cat => cat.title === selectedCategory)
     );
+
+  function getRandomImages(arr, count) {
+    const shuffled = [...arr].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  }
+  const randomImages = getRandomImages(allImages, 3);
+
   return (
     <div>
       <section>
@@ -102,31 +113,48 @@ export default function Articles() {
             </button>
           ))}
         </div>
-        <div id="ArticleArea">
-          {filteredPosts.map((post) => (
-            <article key={post.slug.current}>
-              <Link to={`/articles/${post.slug.current}`}>
-                <img src={post.mainImage.asset.url} alt={post.title} />
-              </Link>
-              {post.categories !== null && (
-                <ul className="Categories">
-                  {post.categories.map((category, index) => (
-                    <li key={index} 
-                      style={{
-                        display: 'inline-block',
-                        margin: '3px',
-                        padding: '2px 6px',
-                        borderRadius: '4px',
-                        backgroundColor: categoryColors[category.title] || '#eee',
-                        color: 'white',
-                        fontWeight: 'bold',
-                    }}>{category.title}</li>
-                  ))}
-                </ul>
-              )}
-              <h3>{post.title}</h3>
-            </article>
-          ))}
+        <div id="ArticlesAndAds">
+          <div id="ArticleArea">
+            {filteredPosts.map((post) => (
+              <article key={post.slug.current}>
+                <Link to={`/articles/${post.slug.current}`}>
+                  <img src={post.mainImage.asset.url} alt={post.title} />
+                </Link>
+                {post.categories !== null && (
+                  <ul className="Categories">
+                    {post.categories.map((category, index) => (
+                      <li key={index} 
+                        style={{
+                          display: 'inline-block',
+                          margin: '3px',
+                          padding: '2px 6px',
+                          borderRadius: '4px',
+                          backgroundColor: categoryColors[category.title] || '#eee',
+                          color: 'white',
+                          fontWeight: 'bold',
+                      }}>{category.title}</li>
+                    ))}
+                  </ul>
+                )}
+                <h3>{post.title}</h3>
+              </article>
+            ))}
+          </div>
+          <div id="AdArea">
+            <p>A word from our benefactors</p>
+            <hr />
+            <div id = "AdImages">
+              {randomImages.map((img, index) => (
+               <img
+                  key={index}
+                  src={img}
+                  alt={`Random ${index}`}
+                  style={{ width: '200px', margin: '10px' }}
+                />
+              ))}
+              <img1 />
+            </div>
+          </div>
         </div>
 
         {/* Pagination menu */}
