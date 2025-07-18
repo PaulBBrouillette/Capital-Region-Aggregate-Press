@@ -58,7 +58,7 @@ export default function SinglePost() {
         <section>
           <div id="flex-container">
             <div id="main-content">
-              <div id="main-title-image">
+              <div id="title-date-image">
                 <h1>{singlePost.title}</h1>
                 <p id="author">By {singlePost.name}</p>
                 <p id="date">

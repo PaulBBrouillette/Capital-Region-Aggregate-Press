@@ -4,20 +4,26 @@ import Articles from "./components/Articles"
 import SinglePost from "./components/SinglePost"
 import Error from "./components/Error"
 import Footer from "./components/Footer"
+import About from "./components/About"
 
 function App() {
   return (
-    <Router>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Articles />} exact />
-      <Route path="/articles/:slug" element={<SinglePost />} />
-      <Route path="/articles/page/:pageNumber" element={<Articles />} />
-      <Route path="/articles" element={<Articles />} />
-      <Route path="*" element={<Error />} />
-    </Routes>
-    <Footer />
-    </Router>
+    <div className="page-container">
+      <Router>
+      <Header />
+      <main className="content-wrap">
+        <Routes>
+          <Route path="/" element={<Articles />} exact />
+          <Route path="/articles/:slug" element={<SinglePost />} />
+          <Route path="/articles/page/:pageNumber" element={<Articles />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/About" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
+      <Footer />
+      </Router>
+    </div>
   );
 }
 

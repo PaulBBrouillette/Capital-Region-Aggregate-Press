@@ -1,0 +1,18 @@
+#AllContent {
+    min-height: 100vh;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 15px;
+}
+
+p {
+    font-size: 1.6em;
+    margin: 15px 10%;
+}
+
+ul {
+    font-size: 1.6em;
+    margin-left: 10%;
+}

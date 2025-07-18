@@ -1,106 +1,105 @@
-#NavBar {
+* {
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
-    background-color: var(--Albany-Blue);
+}
+
+.navbar {
+    font-family: "Playfair Display", sans-serif;
     display: flex;
     width: 100vw;
-    padding: 0;
-    margin: 0 auto;
-    left: 0;
-    top: 0;
-}
-
-.active {
-    font-weight: bold;
-}
-
-#NavBar-Title {
+    background-color: var(--Albany-Blue);
     color: white;
-    margin: 0px;
-    padding: 0px;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 40px -2px rgba(0, 0, 0, .5);
 }
 
-#Nav-Image {
-    width: 25%;
+.navbar-left {
+    flex: 0 0 30%;
 }
 
-#NavBar-Remainder {
+.logo {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.navbar-right {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 75vw;
-    color: white;
-    font-family: "Playfair Display SC", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-#NavBar-Sub {
-    font-size: 1.2em;
+    padding-left: 20px;
     text-align: center;
-    padding: 10px;
 }
 
-#NavBar-Links {
-    height: 50%;
+.navbar-text {
+    margin-bottom: 10px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0 auto;
-    vertical-align: bottom;
+.title {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.nav-links {
     display: flex;
-    align-content: flex-start;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-li {
-    display: inline-block;
-    margin-top: auto;
-    padding: 10px;
+.nav-links ul {
+    text-align: center;
 }
 
-li a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 32px;
+    font-weight: bold;
 }
 
-li a:hover {
-    color:rgb(180, 180, 230)
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25vw;
-    height: 100%;
+.nav-links a:hover {
+    color: rgb(142, 148, 204);
 }
 
 @media (max-width: 768px) {
-    #NavBar {
-        display: block;
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    #NavBar-Remainder {
-        width: 100%;
-    }
-    #NavBar-Title {
-        font-size: 2.5em;
-        padding: 6px;
-    }
-    #NavBar-Sub {
-        font-size: 1.6em;
-    }
-    img {
-        width: 75vw;
-    }
-    #Nav-Image {
-        width: 100%;
-    }
-}
 
-@media (min-width: 768px) {
-    #NavBar-Title {
-        font-size: 2.5em;
-        padding: 6px;
+    .navbar-left,
+    .navbar-right {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar-right {
+        padding-left: 0;
+    }
+
+    .navbar-text {
+        margin-bottom: 5px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
     }
 }

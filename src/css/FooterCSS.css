@@ -7,11 +7,15 @@ footer {
     background: var(--Albany-Orange);
     height: auto;
     margin-top: 10px;
+    box-shadow: 0 -4px 40px 2px rgba(0, 0, 0, .5);
 }
 
 footer img {
-    width: 40%;
-    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vw;
+    height: 100%;
 }
 
 p {

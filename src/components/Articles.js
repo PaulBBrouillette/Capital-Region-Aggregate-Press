@@ -5,9 +5,10 @@ import "../css/ArticlesCSS.css";
 import img1 from '../assets/Ads/ToeAd.jpg';
 import img2 from '../assets/Ads/HotSinglesAd.jpg';
 import img3 from '../assets/Ads/EggAd.jpg';
+import img4 from '../assets/Ads/DermatologistAd.jpg';
 
 export default function Articles() {
-  const allImages = [img1, img2, img3];
+  const allImages = [img1, img2, img3, img4];
   const [posts, setPosts] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const { pageNumber } = useParams();  // Get page number from URL
@@ -22,7 +23,7 @@ export default function Articles() {
     Life: "#F79F79"
   };
 
-  const postsPerPage = 6; // Number of posts per page
+  const postsPerPage = 12; // Number of posts per page
   const currentPage = pageNumber ? parseInt(pageNumber, 10) : 1; // Default to page 1 if no page number
 
   useEffect(() => {
@@ -91,7 +92,7 @@ export default function Articles() {
     const shuffled = [...arr].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   }
-  const randomImages = getRandomImages(allImages, 3);
+  const randomImages = getRandomImages(allImages, posts.length / 3);
 
   return (
     <div>
