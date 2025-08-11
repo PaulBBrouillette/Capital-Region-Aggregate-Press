@@ -6,7 +6,7 @@ export default function Header() {
     <>
       <nav class="navbar">
         <div class="navbar-left">
-          <img src={process.env.PUBLIC_URL + "/images/logoblue.png"} alt="CRAP logo" class="logo" />
+          <img src={process.env.PUBLIC_URL + "/images/logoblue.png"} alt="CRAP logo" class="logo" title="Yeah that's funny right?" />
         </div>
         <div class="navbar-right">
           <div class="navbar-text">
@@ -25,7 +25,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link to={`/About`}>
+              <Link to={`/Staff`}>
                 Staff
               </Link>
             </li>

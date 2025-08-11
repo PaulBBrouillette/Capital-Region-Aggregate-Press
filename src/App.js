@@ -5,6 +5,7 @@ import SinglePost from "./components/SinglePost"
 import Error from "./components/Error"
 import Footer from "./components/Footer"
 import About from "./components/About"
+import Staff from "./components/Staff"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/articles/page/:pageNumber" element={<Articles />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/About" element={<About />} />
+           <Route path="/Staff" element={<Staff />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>

@@ -1,11 +1,11 @@
-import '../css/AboutCSS.css';
+import '../css/HeaderLinksCSS.css';
 
 export default function About() {
     return (
         <div id="AllContent">
             <h1>About us</h1>
-            <p>Capital Region Aggregate Press (C.R.A.P) is the most reliable source for news pertaining to the Capital Region of the glorious state of New York. 
-                The Capital Region is comprised of the following counties: 
+            <p>Capital Region Aggregate Press (C.R.A.P) is the most reliable source for news pertaining to the Capital Region of the glorious state of New York.
+                The Capital Region is comprised of the following counties:
             </p>
             <ul>
                 <li>Albany</li>
@@ -20,6 +20,17 @@ export default function About() {
                 <li>Washington</li>
                 <li>and Warren, unfortunately</li>
             </ul>
+            <br></br>
+            <p>
+                We are a small team of journalists with nothing better to do. Hell, we're so small one of the journalists had to write the code for this website too. We all have a penchant for the Capital Region
+                and show it through our quality news articles. If you're curious to see the code for how the website functions or you're a tech recruiter looking for a skilled developer
+                (HINT HINT 👀) then <a href="https://github.com/PaulBBrouillette/Capital-Region-Aggregate-Press" target="_blank" rel="noreferrer">check it out here.</a>
+            </p>
+            <br></br>
+            <p>
+                Note this is not at all satire. All articles, ads and opinions herein are geniune and not meant
+                to poke fun or make merry of current events... HONEST!
+            </p>
         </div>
     );
 }

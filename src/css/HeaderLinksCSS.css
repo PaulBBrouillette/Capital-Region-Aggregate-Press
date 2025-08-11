@@ -1,0 +1,75 @@
+#AllContent {
+    min-height: 100vh;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 15px;
+}
+
+p {
+    font-size: 1.6em;
+    margin: 15px 10%;
+}
+
+ul {
+    font-size: 1.6em;
+    margin-left: 10%;
+}
+
+.SingleStaff {
+    display: flex;
+    margin: 30px;
+}
+
+.RoleBio {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.RoleBio h3 {
+    font-size: 26px;
+}
+
+.RoleBio p {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.NameImage h2 {
+    font-size: 32px;
+}
+
+.NameImage img {
+    border: 2px solid black;
+    margin: 10px;
+    width: 25vw;
+}
+
+.BioLinks {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.BioLinks img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .SingleStaff, .RoleBio {
+        display: block;
+        text-align: center;
+    }
+
+    .NameImage img {
+        width: 35vw;
+    }
+
+    .BioLinks  {
+    justify-content: center;
+}
+}
