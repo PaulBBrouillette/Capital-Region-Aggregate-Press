@@ -23,8 +23,8 @@ export default function About() {
             <br></br>
             <p>
                 We are a small team of journalists with nothing better to do. Hell, we're so small one of the journalists had to write the code for this website too. We all have a penchant for the Capital Region
-                and show it through our quality news articles. If you're curious to see the code for how the website functions or you're a tech recruiter looking for a skilled developer
-                (HINT HINT 👀) then <a href="https://github.com/PaulBBrouillette/Capital-Region-Aggregate-Press" target="_blank" rel="noreferrer">check it out here.</a>
+                and show it through our quality news articles. If you're curious to see the code for how the website functions
+                (HINT HINT TECH RECRUITERS 👀) then <a href="https://github.com/PaulBBrouillette/Capital-Region-Aggregate-Press" target="_blank" rel="noreferrer">check it out here.</a>
             </p>
             <br></br>
             <p>

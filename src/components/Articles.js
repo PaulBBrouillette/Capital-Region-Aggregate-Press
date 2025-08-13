@@ -6,9 +6,10 @@ import img1 from '../assets/Ads/ToeAd.jpg';
 import img2 from '../assets/Ads/HotSinglesAd.jpg';
 import img3 from '../assets/Ads/EggAd.jpg';
 import img4 from '../assets/Ads/DermatologistAd.jpg';
+import img5 from '../assets/Ads/WingsAd.jpg';
 
 export default function Articles() {
-  const allImages = [img1, img2, img3, img4];
+  const allImages = [img1, img2, img3, img4, img5];
   const [posts, setPosts] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const { pageNumber } = useParams();  // Get page number from URL

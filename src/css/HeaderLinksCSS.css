@@ -20,6 +20,7 @@ ul {
 .SingleStaff {
     display: flex;
     margin: 30px;
+    margin-bottom: 45px;
 }
 
 .RoleBio {
