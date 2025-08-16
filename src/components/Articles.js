@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 import client from "../client";
 import "../css/ArticlesCSS.css";
 import img1 from '../assets/Ads/ToeAd.jpg';
@@ -97,6 +98,16 @@ export default function Articles() {
 
   return (
     <div>
+      <Helmet>
+        <title>Articles - My Site</title>
+        <meta property="og:title" content="Articles - My Site" />
+        <meta property="og:description" content="The Capital Region's Most Reliable News Site" />
+        {filteredPosts.length > 0 && (
+          <meta property="og:image" content={filteredPosts[0].mainImage.asset.url} />
+        )}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
       <section>
         <div className="category-filter" style={{ marginBottom: '20px', textAlign: 'center' }}>
           {["All", "Local", "World", "Politics", "Life"].map((category) => (
