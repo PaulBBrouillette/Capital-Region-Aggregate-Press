@@ -6,6 +6,7 @@ import Error from "./components/Error"
 import Footer from "./components/Footer"
 import About from "./components/About"
 import Staff from "./components/Staff"
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Router>
       <Header />
       <main className="content-wrap">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Articles />} exact />
           <Route path="/articles/:slug" element={<SinglePost />} />
