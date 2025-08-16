@@ -6,7 +6,9 @@ export default function Header() {
     <>
       <nav class="navbar">
         <div class="navbar-left">
-          <img src={process.env.PUBLIC_URL + "/images/logoblue.png"} alt="CRAP logo" class="logo" title="Yeah that's funny right?" />
+          <Link to="/">
+            <img src={process.env.PUBLIC_URL + "/images/logoblue.png"} alt="CRAP logo" class="logo" title="Yeah that's funny right?"></img>
+          </Link>
         </div>
         <div class="navbar-right">
           <div class="navbar-text">
