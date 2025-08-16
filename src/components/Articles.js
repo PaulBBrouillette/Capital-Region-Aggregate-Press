@@ -8,6 +8,7 @@ import img2 from '../assets/Ads/HotSinglesAd.jpg';
 import img3 from '../assets/Ads/EggAd.jpg';
 import img4 from '../assets/Ads/DermatologistAd.jpg';
 import img5 from '../assets/Ads/WingsAd.jpg';
+import logo from '../assets/OtherPics/logoblue.png';
 
 export default function Articles() {
   const allImages = [img1, img2, img3, img4, img5];
@@ -98,16 +99,19 @@ export default function Articles() {
 
   return (
     <div>
-      <Helmet>
-        <title>Articles - My Site</title>
-        <meta property="og:title" content="Articles - My Site" />
-        <meta property="og:description" content="The Capital Region's Most Reliable News Site" />
-        {filteredPosts.length > 0 && (
-          <meta property="og:image" content={filteredPosts[0].mainImage.asset.url} />
-        )}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+      {!isLoading && (
+        <Helmet>
+          <title>Capital Region Aggregate Press</title>
+          <meta property="og:title" content="Capital Region Aggregate Press" />
+          <meta property="og:description" content="The Capital Region's Most Reliable News Site" />
+          <meta property="og:image" content={logo} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={window.location.href} />
       </Helmet>
+      )}
+      {isLoading ? (
+        <h1>Loading...</h1>
+      ) : (
       <section>
         <div className="category-filter" style={{ marginBottom: '20px', textAlign: 'center' }}>
           {["All", "Local", "World", "Politics", "Life"].map((category) => (
@@ -175,6 +179,7 @@ export default function Articles() {
           {renderPaginationLinks()}
         </div>
       </section>
+      )}
     </div>
   );
 }
