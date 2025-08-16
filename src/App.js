@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header"
 import Articles from "./components/Articles"
 import SinglePost from "./components/SinglePost"
@@ -19,7 +19,7 @@ function App() {
           <Route path="/articles/page/:pageNumber" element={<Articles />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/About" element={<About />} />
-           <Route path="/Staff" element={<Staff />} />
+          <Route path="/Staff" element={<Staff />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
