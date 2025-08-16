@@ -2,7 +2,16 @@
   command = "npm run build"
   publish = "build"
 
+# Ensure all client-side routes fall back to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Send crawler traffic to Prerender.io
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Prerender-Token = "6oMzcbSQIIgGGHcd2c4N"
+    # Helps bots get prerendered pages
+    Cache-Control = "public, max-age=0, must-revalidate"
