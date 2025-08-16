@@ -107,7 +107,7 @@ export default function Articles() {
           <meta property="og:image" content={logo} />
           <meta property="og:type" content="website" />
           <meta property="og:url" content={window.location.href} />
-      </Helmet>
+        </Helmet>
       )}
       {isLoading ? (
         <h1>Loading...</h1>

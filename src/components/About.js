@@ -1,8 +1,18 @@
 import '../css/HeaderLinksCSS.css';
+import logo from '../assets/OtherPics/logoblue.png';
+import {Helmet} from "react-helmet";
 
 export default function About() {
     return (
         <div id="AllContent">
+            <Helmet>
+                <title>Capital Region Aggregate Press</title>
+                <meta property="og:title" content="Capital Region Aggregate Press" />
+                <meta property="og:description" content="The Capital Region's Most Reliable News Site" />
+                <meta property="og:image" content={logo} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={window.location.href} />
+            </Helmet>
             <h1>About us</h1>
             <p>Capital Region Aggregate Press (C.R.A.P) is the most reliable source for news pertaining to the Capital Region of the glorious state of New York.
                 The Capital Region is comprised of the following counties:
