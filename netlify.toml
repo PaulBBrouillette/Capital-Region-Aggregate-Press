@@ -11,9 +11,6 @@
 [prerender]
   enabled = true
 
-[[plugins]]
-  package = "@netlify/plugin-prerender"
-
 # Send crawler traffic to Prerender.io
 [[headers]]
   for = "/*"
