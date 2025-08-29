@@ -1,6 +1,6 @@
-p {
-    font-size: 20px;
-    margin: 30px 25px;
+#main-content p {
+    font-size: 24px;
+    margin: 25px;
 }
 
 h1 {
@@ -71,6 +71,18 @@ section {
 
 #main-blurb-paragraphs p:last-of-type {
     margin-bottom: 100px;
+    display: none;
+}
+
+#TaxMessage {
+    display: none;
+    background-color: green;
+    width: 40%;
+    height: 10%;
+    padding: 0;
+    text-align: center;
+    border: 3px groove rgb(0, 57, 0);
+    margin: 20px;
 }
 
 @media (max-width: 768px) {
@@ -95,6 +107,10 @@ section {
         max-width: 100%;
         max-height: 100%;
         width: 75vw;
+    }
+
+    #TaxMessage {
+        width: 60%;
     }
 }
 

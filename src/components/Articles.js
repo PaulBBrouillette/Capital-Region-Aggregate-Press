@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import {Helmet} from "react-helmet";
 import client from "../client";
 import "../css/ArticlesCSS.css";
 import img1 from '../assets/Ads/ToeAd.jpg';
@@ -8,10 +7,10 @@ import img2 from '../assets/Ads/HotSinglesAd.jpg';
 import img3 from '../assets/Ads/EggAd.jpg';
 import img4 from '../assets/Ads/DermatologistAd.jpg';
 import img5 from '../assets/Ads/WingsAd.jpg';
-import logo from '../assets/OtherPics/logoblue.png';
+import img6 from '../assets/Ads/YogurtAd.jpg'
 
 export default function Articles() {
-  const allImages = [img1, img2, img3, img4, img5];
+  const allImages = [img1, img2, img3, img4, img5, img6];
   const [posts, setPosts] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const { pageNumber } = useParams();  // Get page number from URL
@@ -19,11 +18,13 @@ export default function Articles() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const categoryColors = {
-    All: "#28536B",
-    Local: "#A30015",
-    World: "#AED9E0",
-    Politics: "#AF4D98",
-    Life: "#F79F79"
+    All: "#F7B32B",
+    Local: "#052F5F",
+    World: "#028090",
+    Politics: "#6E0D25",
+    Life: "#d797d8ff",
+    Entertainment: "#495f47ff",
+    Digression: "#A37A74"
   };
 
   const postsPerPage = 12; // Number of posts per page
@@ -31,13 +32,26 @@ export default function Articles() {
 
   useEffect(() => {
     const loadPosts = async () => {
+      setIsLoading(true);
+      let footerRef = null;
+      let headerRef = null;
+      footerRef = document.getElementsByTagName("footer");
+      headerRef = document.getElementsByTagName("nav");
+      console.log(headerRef);
+      if (footerRef) {
+        footerRef[0].style.display = 'none';
+      }
+      if (headerRef) {
+        headerRef[0].style.display = 'none';
+      }
       // Fetch the total number of posts to calculate total pages
       const totalPosts = await client.fetch(`count(*[_type == "post"])`);
       setTotalPages(Math.ceil(totalPosts / postsPerPage));
 
       // Fetch only the posts for the current page, with limit and offset
-      client.fetch(
-        `*[_type == "post"] | order(publishedAt desc) [${(currentPage - 1) * postsPerPage}...${currentPage * postsPerPage}] {
+      try {
+        client.fetch(
+          `*[_type == "post"] | order(publishedAt desc) [${(currentPage - 1) * postsPerPage}...${currentPage * postsPerPage}] {
           title,
           slug,
           publishedAt,
@@ -48,10 +62,22 @@ export default function Articles() {
           },
           "name": author -> name
         }`
-      )
-        .then((data) => setPosts(data))
-        .catch(console.error);
-      setIsLoading(false);
+        )
+          .then((data) => setPosts(data))
+          .catch(console.error);
+      }
+      catch (error) {
+        console.log("Error retrieving articles: " + error)
+      }
+      finally {
+        if (footerRef) {
+          footerRef[0].style.display = 'block';
+        }
+        if (headerRef) {
+          headerRef[0].style.display = 'flex';
+        }
+        setIsLoading(false);
+      }
     };
 
     loadPosts();
@@ -99,86 +125,77 @@ export default function Articles() {
 
   return (
     <div>
-      {!isLoading && (
-        <Helmet>
-          <title>Capital Region Aggregate Press</title>
-          <meta property="og:title" content="Capital Region Aggregate Press" />
-          <meta property="og:description" content="The Capital Region's Most Reliable News Site" />
-          <meta property="og:image" content={logo} />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content={window.location.href} />
-        </Helmet>
-      )}
       {isLoading ? (
-        <h1>Loading...</h1>
+        <h1 style={{ textAlign: 'center' }}>Loading...</h1>
       ) : (
-      <section>
-        <div className="category-filter" style={{ marginBottom: '20px', textAlign: 'center' }}>
-          {["All", "Local", "World", "Politics", "Life"].map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              style={{
-                margin: '5px',
-                padding: '5px 15px',
-                cursor: 'pointer',
-                backgroundColor: selectedCategory === category ? categoryColors[category] : 'white',
-                color: selectedCategory === category ? 'white' : 'black'
-              }}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        <div id="ArticlesAndAds">
-          <div id="ArticleArea">
-            {filteredPosts.map((post) => (
-              <article key={post.slug.current}>
-                <Link to={`/articles/${post.slug.current}`}>
-                  <img src={post.mainImage.asset.url} alt={post.title} />
-                </Link>
-                {post.categories !== null && (
-                  <ul className="Categories">
-                    {post.categories.map((category, index) => (
-                      <li key={index} 
-                        style={{
-                          display: 'inline-block',
-                          margin: '3px',
-                          padding: '2px 6px',
-                          borderRadius: '4px',
-                          backgroundColor: categoryColors[category.title] || '#eee',
-                          color: 'white',
-                          fontWeight: 'bold',
-                      }}>{category.title}</li>
-                    ))}
-                  </ul>
-                )}
-                <h3>{post.title}</h3>
-              </article>
+        <section>
+          <div className="category-filter" style={{ marginBottom: '20px', textAlign: 'center' }}>
+            {["All", "Local", "World", "Politics", "Life", "Entertainment", "Digression"].map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                style={{
+                  margin: '5px',
+                  padding: '5px 15px',
+                  cursor: 'pointer',
+                  backgroundColor: selectedCategory === category ? categoryColors[category] : 'white',
+                  color: selectedCategory === category ? 'white' : 'black'
+                }}>
+                {category}
+              </button>
             ))}
           </div>
-          <div id="AdArea">
-            <p>A word from our benefactors</p>
-            <hr />
-            <div id = "AdImages">
-              {randomImages.map((img, index) => (
-               <img
-                  key={index}
-                  src={img}
-                  alt={`Random ${index}`}
-                  style={{ width: '200px', margin: '10px' }}
-                />
+          <div id="ArticlesAndAds">
+            <div id="ArticleArea">
+              {filteredPosts.map((post) => (
+                <article key={post.slug.current}>
+                  <Link to={`/articles/${post.slug.current}`}>
+                    <img src={post.mainImage.asset.url} alt={post.title} />
+                  </Link>
+                  {post.categories !== null && (
+                    <ul className="Categories">
+                      
+                      {post.categories.filter(category => category.title !== "TAX_MESSAGE").map((category, index) => (
+                        <li key={index}
+                          style={{
+                            display: 'inline-block',
+                            margin: '3px',
+                            padding: '2px 6px',
+                            borderRadius: '4px',
+                            backgroundColor: categoryColors[category.title] || '#eee',
+                            color: 'white',
+                            fontWeight: 'bold',
+                            cursor: 'default'
+                          }}>{category.title}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <h3>{post.title}</h3>
+                </article>
               ))}
-              <img1 />
+            </div>
+            <div id="AdArea">
+              <p>A word from our benefactors</p>
+              <hr />
+              <div id="AdImages">
+                {randomImages.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`Random ${index}`}
+                    style={{ width: '200px', margin: '10px' }}
+                  />
+                ))}
+                <img1 />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Pagination menu */}
-        <div className="pagination" style={{ margin: '20px 5px 5px', textAlign: 'center' }}>
-          {renderPaginationLinks()}
-        </div>
-      </section>
+          {/* Pagination menu */}
+          <div className="pagination" style={{ margin: '20px 5px 5px', textAlign: 'center' }}>
+            {renderPaginationLinks()}
+          </div>
+        </section>
       )}
     </div>
   );
