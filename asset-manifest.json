@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/Capital-Region-Aggregate-Press/static/css/main.6b3c5d31.css",
-    "main.js": "/Capital-Region-Aggregate-Press/static/js/main.9d2e5c23.js",
-    "static/js/796.8d18e7ca.chunk.js": "/Capital-Region-Aggregate-Press/static/js/796.8d18e7ca.chunk.js",
-    "static/js/165.173d369d.chunk.js": "/Capital-Region-Aggregate-Press/static/js/165.173d369d.chunk.js",
-    "static/js/453.99e677a0.chunk.js": "/Capital-Region-Aggregate-Press/static/js/453.99e677a0.chunk.js",
-    "static/media/Paul.JPG": "/Capital-Region-Aggregate-Press/static/media/Paul.ca00fb4de0a52fc51091.JPG",
-    "static/media/ToeAd.jpg": "/Capital-Region-Aggregate-Press/static/media/ToeAd.8d94e34956d2e43a0b1f.jpg",
-    "static/media/WingsAd.jpg": "/Capital-Region-Aggregate-Press/static/media/WingsAd.969b4784482fdb8d5ef3.jpg",
-    "static/media/DermatologistAd.jpg": "/Capital-Region-Aggregate-Press/static/media/DermatologistAd.586fdf8db43bdaa52718.jpg",
-    "static/media/EggAd.jpg": "/Capital-Region-Aggregate-Press/static/media/EggAd.23bdd49e1cb5e07501d1.jpg",
-    "static/media/HotSinglesAd.jpg": "/Capital-Region-Aggregate-Press/static/media/HotSinglesAd.0fafa1a64dac7c2223e0.jpg",
-    "index.html": "/Capital-Region-Aggregate-Press/index.html",
-    "main.6b3c5d31.css.map": "/Capital-Region-Aggregate-Press/static/css/main.6b3c5d31.css.map",
-    "main.9d2e5c23.js.map": "/Capital-Region-Aggregate-Press/static/js/main.9d2e5c23.js.map",
-    "796.8d18e7ca.chunk.js.map": "/Capital-Region-Aggregate-Press/static/js/796.8d18e7ca.chunk.js.map",
-    "165.173d369d.chunk.js.map": "/Capital-Region-Aggregate-Press/static/js/165.173d369d.chunk.js.map",
-    "453.99e677a0.chunk.js.map": "/Capital-Region-Aggregate-Press/static/js/453.99e677a0.chunk.js.map"
+    "main.css": "./static/css/main.faa5a764.css",
+    "main.js": "./static/js/main.94c27529.js",
+    "static/js/796.8d18e7ca.chunk.js": "./static/js/796.8d18e7ca.chunk.js",
+    "static/js/165.173d369d.chunk.js": "./static/js/165.173d369d.chunk.js",
+    "static/js/453.99e677a0.chunk.js": "./static/js/453.99e677a0.chunk.js",
+    "static/media/Paul.JPG": "./static/media/Paul.ca00fb4de0a52fc51091.JPG",
+    "static/media/ToeAd.jpg": "./static/media/ToeAd.8d94e34956d2e43a0b1f.jpg",
+    "static/media/YogurtAd.jpg": "./static/media/YogurtAd.9ca4e9bd3065b2221c7f.jpg",
+    "static/media/Leprechaun.jpg": "./static/media/Leprechaun.d655f3e11058131355bb.jpg",
+    "static/media/WingsAd.jpg": "./static/media/WingsAd.969b4784482fdb8d5ef3.jpg",
+    "static/media/DermatologistAd.jpg": "./static/media/DermatologistAd.586fdf8db43bdaa52718.jpg",
+    "static/media/EggAd.jpg": "./static/media/EggAd.23bdd49e1cb5e07501d1.jpg",
+    "static/media/HotSinglesAd.jpg": "./static/media/HotSinglesAd.0fafa1a64dac7c2223e0.jpg",
+    "index.html": "./index.html",
+    "main.faa5a764.css.map": "./static/css/main.faa5a764.css.map",
+    "main.94c27529.js.map": "./static/js/main.94c27529.js.map",
+    "796.8d18e7ca.chunk.js.map": "./static/js/796.8d18e7ca.chunk.js.map",
+    "165.173d369d.chunk.js.map": "./static/js/165.173d369d.chunk.js.map",
+    "453.99e677a0.chunk.js.map": "./static/js/453.99e677a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b3c5d31.css",
-    "static/js/main.9d2e5c23.js"
+    "static/css/main.faa5a764.css",
+    "static/js/main.94c27529.js"
   ]
 }
