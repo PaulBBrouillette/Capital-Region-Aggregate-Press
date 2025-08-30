@@ -125,78 +125,74 @@ export default function Articles() {
 
   return (
     <div>
-      {isLoading ? (
-        <h1 style={{ textAlign: 'center' }}>Loading...</h1>
-      ) : (
-        <section>
-          <div className="category-filter" style={{ marginBottom: '20px', textAlign: 'center' }}>
-            {["All", "Local", "World", "Politics", "Life", "Entertainment", "Digression"].map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                style={{
-                  margin: '5px',
-                  padding: '5px 15px',
-                  cursor: 'pointer',
-                  backgroundColor: selectedCategory === category ? categoryColors[category] : 'white',
-                  color: selectedCategory === category ? 'white' : 'black'
-                }}>
-                {category}
-              </button>
+      <section>
+        <div className="category-filter" style={{ marginBottom: '20px', textAlign: 'center' }}>
+          {["All", "Local", "World", "Politics", "Life", "Entertainment", "Digression"].map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              style={{
+                margin: '5px',
+                padding: '5px 15px',
+                cursor: 'pointer',
+                backgroundColor: selectedCategory === category ? categoryColors[category] : 'white',
+                color: selectedCategory === category ? 'white' : 'black'
+              }}>
+              {category}
+            </button>
+          ))}
+        </div>
+        <div id="ArticlesAndAds">
+          <div id="ArticleArea">
+            {filteredPosts.map((post) => (
+              <article key={post.slug.current}>
+                <Link to={`/articles/${post.slug.current}`}>
+                  <img src={post.mainImage.asset.url} alt={post.title} />
+                </Link>
+                {post.categories !== null && (
+                  <ul className="Categories">
+
+                    {post.categories.filter(category => category.title !== "TAX_MESSAGE").map((category, index) => (
+                      <li key={index}
+                        style={{
+                          display: 'inline-block',
+                          margin: '3px',
+                          padding: '2px 6px',
+                          borderRadius: '4px',
+                          backgroundColor: categoryColors[category.title] || '#eee',
+                          color: 'white',
+                          fontWeight: 'bold',
+                          cursor: 'default'
+                        }}>{category.title}</li>
+                    ))}
+                  </ul>
+                )}
+                <h3>{post.title}</h3>
+              </article>
             ))}
           </div>
-          <div id="ArticlesAndAds">
-            <div id="ArticleArea">
-              {filteredPosts.map((post) => (
-                <article key={post.slug.current}>
-                  <Link to={`/articles/${post.slug.current}`}>
-                    <img src={post.mainImage.asset.url} alt={post.title} />
-                  </Link>
-                  {post.categories !== null && (
-                    <ul className="Categories">
-                      
-                      {post.categories.filter(category => category.title !== "TAX_MESSAGE").map((category, index) => (
-                        <li key={index}
-                          style={{
-                            display: 'inline-block',
-                            margin: '3px',
-                            padding: '2px 6px',
-                            borderRadius: '4px',
-                            backgroundColor: categoryColors[category.title] || '#eee',
-                            color: 'white',
-                            fontWeight: 'bold',
-                            cursor: 'default'
-                          }}>{category.title}</li>
-                      ))}
-                    </ul>
-                  )}
-                  <h3>{post.title}</h3>
-                </article>
+          <div id="AdArea">
+            <p>A word from our benefactors</p>
+            <hr />
+            <div id="AdImages">
+              {randomImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Random ${index}`}
+                  style={{ width: '200px', margin: '10px' }}
+                />
               ))}
-            </div>
-            <div id="AdArea">
-              <p>A word from our benefactors</p>
-              <hr />
-              <div id="AdImages">
-                {randomImages.map((img, index) => (
-                  <img
-                    key={index}
-                    src={img}
-                    alt={`Random ${index}`}
-                    style={{ width: '200px', margin: '10px' }}
-                  />
-                ))}
-                <img1 />
-              </div>
+              <img1 />
             </div>
           </div>
+        </div>
 
-          {/* Pagination menu */}
-          <div className="pagination" style={{ margin: '20px 5px 5px', textAlign: 'center' }}>
-            {renderPaginationLinks()}
-          </div>
-        </section>
-      )}
+        {/* Pagination menu */}
+        <div className="pagination" style={{ margin: '20px 5px 5px', textAlign: 'center' }}>
+          {renderPaginationLinks()}
+        </div>
+      </section>
     </div>
   );
 }

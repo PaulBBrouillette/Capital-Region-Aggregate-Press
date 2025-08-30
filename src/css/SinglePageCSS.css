@@ -8,7 +8,7 @@ h1 {
     margin: 0;
 }
 
-figure + p {
+figure+p {
     text-align: center;
     margin-top: 0;
 }
@@ -16,7 +16,7 @@ figure + p {
 figure {
     text-align: center;
 }
-  
+
 figure img {
     display: inline-block;
     margin-bottom: 0;
@@ -75,21 +75,34 @@ section {
 }
 
 #TaxMessage {
-    display: none;
     background-color: green;
-    width: 40%;
-    height: 10%;
-    padding: 0;
-    text-align: center;
-    border: 3px groove rgb(0, 57, 0);
-    margin: 20px;
+    border: 12px ridge rgb(4, 84, 4);
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    width: 35vw;
+}
+
+#TaxMessage img {
+    max-width: 10vw;
+}
+
+#TaxMessage hr {
+    background-color: rgb(4, 84, 4);
+    height: 4px;
+    border: 1px solid rgb(3, 40, 3);
+    border-radius: 2px;
+}
+
+#main-blurb-paragraphs {
+    margin-left: 60px;
 }
 
 @media (max-width: 768px) {
     h1 {
         font-size: 32px;
     }
-    
+
     #ad-section {
         display: none;
     }
@@ -111,9 +124,19 @@ section {
 
     #TaxMessage {
         width: 60%;
+        margin: 0 auto;
     }
-}
 
-#main-blurb-paragraphs {
-    margin-left: 60px;
+    #TaxMessage img {
+        max-width: 25vw;
+    }
+
+    #main-blurb-paragraphs {
+        margin: 10px;
+    }
+    
+    #title-date-image {
+        margin: 10px;
+        text-align: center;
+    }
 }
