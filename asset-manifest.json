@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.faa5a764.css",
-    "main.js": "./static/js/main.94c27529.js",
+    "main.css": "./static/css/main.18aa9e7c.css",
+    "main.js": "./static/js/main.20246178.js",
     "static/js/796.8d18e7ca.chunk.js": "./static/js/796.8d18e7ca.chunk.js",
     "static/js/165.173d369d.chunk.js": "./static/js/165.173d369d.chunk.js",
     "static/js/453.99e677a0.chunk.js": "./static/js/453.99e677a0.chunk.js",
@@ -13,15 +13,16 @@
     "static/media/DermatologistAd.jpg": "./static/media/DermatologistAd.586fdf8db43bdaa52718.jpg",
     "static/media/EggAd.jpg": "./static/media/EggAd.23bdd49e1cb5e07501d1.jpg",
     "static/media/HotSinglesAd.jpg": "./static/media/HotSinglesAd.0fafa1a64dac7c2223e0.jpg",
+    "static/media/IRS.png": "./static/media/IRS.b7b82f9bfc285a5ef40e.png",
     "index.html": "./index.html",
-    "main.faa5a764.css.map": "./static/css/main.faa5a764.css.map",
-    "main.94c27529.js.map": "./static/js/main.94c27529.js.map",
+    "main.18aa9e7c.css.map": "./static/css/main.18aa9e7c.css.map",
+    "main.20246178.js.map": "./static/js/main.20246178.js.map",
     "796.8d18e7ca.chunk.js.map": "./static/js/796.8d18e7ca.chunk.js.map",
     "165.173d369d.chunk.js.map": "./static/js/165.173d369d.chunk.js.map",
     "453.99e677a0.chunk.js.map": "./static/js/453.99e677a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.faa5a764.css",
-    "static/js/main.94c27529.js"
+    "static/css/main.18aa9e7c.css",
+    "static/js/main.20246178.js"
   ]
 }
