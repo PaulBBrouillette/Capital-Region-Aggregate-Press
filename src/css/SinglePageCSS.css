@@ -128,15 +128,26 @@ section {
     }
 
     #TaxMessage img {
-        max-width: 25vw;
+        max-width: 15vw;
+    }
+
+    #TaxMessage p {
+        font-size: 10px;
     }
 
     #main-blurb-paragraphs {
         margin: 10px;
     }
-    
+
     #title-date-image {
         margin: 10px;
         text-align: center;
+    }
+
+    #TaxMessage hr {
+        background-color: rgb(4, 84, 4);
+        height: 4px;
+        border: 1px solid rgb(3, 40, 3);
+        border-radius: 2px;
     }
 }

@@ -173,7 +173,7 @@ export default function Articles() {
           </div>
           <div id="AdArea">
             <p>A word from our benefactors</p>
-            <hr />
+            <hr id="AdHr" />
             <div id="AdImages">
               {randomImages.map((img, index) => (
                 <img

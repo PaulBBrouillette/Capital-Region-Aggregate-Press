@@ -35,7 +35,7 @@
     
 }
 
-hr {
+#AdHr {
     border: none;
     border-top: 3px double #333;
     color: #333;
@@ -120,7 +120,7 @@ button {
         height: auto;
     }
 
-    hr {
+    #AdHr {
         display: none;
     }
 }
