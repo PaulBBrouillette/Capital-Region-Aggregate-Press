@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px; /* replaces margin */
+    gap: 20px;
     width: 80%;
 }
 
