@@ -1,7 +1,5 @@
 import '../css/HeaderLinksCSS.css';
 import PaulPic from '../assets/OtherPics/Paul.png';
-import LinkedInImage from '../assets/OtherPics/LinkedInLogo.png';
-import GitHubImage from '../assets/OtherPics/GitHubLogo.png';
 import logo from '../assets/OtherPics/logoblue.png';
 import {Helmet} from "react-helmet";
 
@@ -20,13 +18,9 @@ export default function About() {
             <div class="SingleStaff">
                 <div class="NameImage">
                     <h2>Paul</h2>
-                    <img src={PaulPic} alt="Paul Brouillette"></img>
+                    <img src={PaulPic} alt="Paul"></img>
                 </div>
                 <div class="RoleBio">
-                    <div class="BioLinks">
-                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/paulbbrouillette"><img src={LinkedInImage} alt="LinkedIn logo"></img></a>
-                        <a target="_blank" rel="noreferrer" href="https://github.com/PaulBBrouillette"><img src={GitHubImage} alt="GitHub logo"></img></a>
-                    </div>
                     <h3>CEO  &#9679; Site Developer &#9679; Journalist &#9679; Swagged out white boy</h3>
                     <p>
                         Paul is the founder of Capital Region Aggregate Press (CRAP) as well as the site developer and a part time journalist.

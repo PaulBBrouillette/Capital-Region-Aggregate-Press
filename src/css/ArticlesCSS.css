@@ -44,8 +44,7 @@
     height: 5px;
 }
 
-#ArticleArea article:nth-child(6n + 3),
-#ArticleArea article:nth-child(6n + 4) {
+#ArticleArea article:nth-child(3n) {
     flex: 0 0 30%;
 }
 
