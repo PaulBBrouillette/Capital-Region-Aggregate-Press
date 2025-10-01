@@ -23,11 +23,10 @@ export default function About() {
             <br></br>
             <p>
                 We are a small team of journalists with nothing better to do. Hell, we're so small one of the journalists had to write the code for this website too. We all have a penchant for the Capital Region
-                and show it through our quality news articles.* We report on a variety of topics from around the Capital Region, everything from potholes on roads,
-                to bumps on roads, or roads with cracks, and yes, even roads with asphalt raveling.  
+                and show it through our quality news articles.* We report on a variety of topics from around the Capital Region, everything from potholes on roads, the state government goofing  around, politics and everything else which makes the Capital Region awesome. Or shitty depending on how you look at it.
             </p>
             <br></br>
-            <p>
+            <p id="Disclaimer">
                 * Note: this is not at all satire. All articles, ads and opinions herein are geniune and not meant
                 to poke fun or make merry of current events... HONEST!
             </p>

@@ -61,6 +61,10 @@ ul {
     border-radius: 5px;
 }
 
+#Disclaimer {
+    font-size: 1.1em;
+}
+
 @media (max-width: 768px) {
     .SingleStaff, .RoleBio {
         display: block;

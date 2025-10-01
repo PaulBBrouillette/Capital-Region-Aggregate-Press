@@ -1,11 +1,12 @@
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header"
-import Articles from "./components/Articles"
-import SinglePost from "./components/SinglePost"
-import Error from "./components/Error"
-import Footer from "./components/Footer"
-import About from "./components/About"
-import Staff from "./components/Staff"
+import Header from "./components/Header";
+import Articles from "./components/Articles";
+import SinglePost from "./components/SinglePost";
+import Error from "./components/Error";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Staff from "./components/Staff";
+import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/About" element={<About />} />
           <Route path="/Staff" element={<Staff />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
