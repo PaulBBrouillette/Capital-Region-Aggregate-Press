@@ -27,7 +27,7 @@ export default function About() {
                         He grew up near the magical city of Utica and now resides in the Capital Region. Albany's alright if you don't mind crackheads and biweekly murders,
                         and it would be easier to go outside during a thunderstorm and try to dodge rain than it would be to avoid potholes on the roads; nonetheless, it's his home for at least the time being.
                         He works as a programmer during the day but still finds time to serve the community in his free time by writing quality CRAP articles.
-                        While he may not like his job, he can't find another one, and he's too poor to afford a house, he at least has this going for him: 
+                        While he may be too poor to afford a house, he at least has this going for him: 
                     </p>
                 </div>
             </div>

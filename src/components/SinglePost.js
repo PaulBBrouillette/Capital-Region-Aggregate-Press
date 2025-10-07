@@ -4,11 +4,13 @@ import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
 import "../css/SinglePageCSS.css";
 import TaxMessage from "./TaxMessage";
+import OffendedMessage from "./OffendedMessage";
 
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [showTaxMessage, setShowTaxMessage] = useState(false);
+  const [showOffendedMessage, setShowOffendedMessage] = useState(false);
   const { slug } = useParams();
 
   console.log("SinglePost reached");
@@ -53,6 +55,12 @@ export default function SinglePost() {
           );
           setShowTaxMessage(hasTaxMessage);
 
+          // if OFFENDED_MESSAGE category exists, trigger the OffendedMessage
+          const hasOffendedMessage = post.categories?.some(
+            (category) => category.title === "OFFENDED_MESSAGE"
+          );
+          setShowOffendedMessage(hasOffendedMessage);
+
           console.log("Categories: ", post.categories);
         } else {
           console.warn("No post found for slug:", slug);
@@ -85,8 +93,9 @@ export default function SinglePost() {
             <div id="main-content">
               <h1 id="title-date-image">{singlePost?.title}</h1>
 
-              {/* Only render TaxMessage if category exists */}
+              {/* Only render messages if category exists */}
               {showTaxMessage && <TaxMessage />}
+              {showOffendedMessage && <OffendedMessage />}
 
               <div id="title-date-image">
                 <p id="author">By {singlePost?.name}</p>

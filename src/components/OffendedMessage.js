@@ -1,19 +1,19 @@
 import '../css/ErrorCSS.css';
-import IRSLogo from '../assets/OtherPics/IRS.png';;
+import Frown from '../assets/OtherPics/frownFace.png';
 
-export default function TaxMessage() {
+export default function OffendedMessage() {
   return (
     <div style={{width: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-      <div id="TaxMessage">
+      <div id="OffendedMessage">
         <table>
           <tr>
             <th>
-              <img src={IRSLogo} alt="IRS logo" />
+              <img src={Frown} alt="IRS logo" />
             </th>
             <th>
-              <p><strong>YOUR TAX DOLLARS AT WORK!</strong></p>
+              <p><strong>Offended?</strong></p>
               <hr style={{ width: '50%', margin: '0 auto' }}></hr>
-              <p><em>The contents of this article are paid for with taxpayer money</em></p>
+              <p><em>That's really quite a shame, but we really don't care</em></p>
             </th>
           </tr>
         </table>

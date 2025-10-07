@@ -152,7 +152,7 @@ export default function Articles() {
                 {post.categories !== null && (
                   <ul className="Categories">
 
-                    {post.categories.filter(category => category.title !== "TAX_MESSAGE").map((category, index) => (
+                    {post.categories.filter(category => category.title !== "TAX_MESSAGE" && category.title !== "OFFENDED_MESSAGE").map((category, index) => (
                       <li key={index}
                         style={{
                           display: 'inline-block',

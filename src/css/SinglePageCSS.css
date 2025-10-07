@@ -71,7 +71,6 @@ section {
 
 #main-blurb-paragraphs p:last-of-type {
     margin-bottom: 100px;
-    display: none;
 }
 
 #TaxMessage {
@@ -91,6 +90,26 @@ section {
     background-color: rgb(4, 84, 4);
     height: 4px;
     border: 1px solid rgb(3, 40, 3);
+    border-radius: 2px;
+}
+
+#OffendedMessage {
+    background-color: yellow;
+    border: 12px ridge rgb(176, 169, 32);
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    width: 35vw;
+}
+
+#OffendedMessage img {
+    max-width: 10vw;
+}
+
+#OffendedMessage hr {
+    background-color: rgb(176, 169, 32);
+    height: 4px;
+    border: 1px solid rgb(176, 169, 32);
     border-radius: 2px;
 }
 
@@ -122,16 +141,16 @@ section {
         width: 75vw;
     }
 
-    #TaxMessage {
+    #TaxMessage, #OffendedMessage {
         width: 60%;
         margin: 0 auto;
     }
 
-    #TaxMessage img {
+    #TaxMessage img, #OffendedMessage img {
         max-width: 15vw;
     }
 
-    #TaxMessage p {
+    #TaxMessage p, #OffendedMessage p {
         font-size: 10px;
     }
 
