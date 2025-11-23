@@ -13,7 +13,7 @@ export default function OffendedMessage() {
             <th>
               <p><strong>Offended?</strong></p>
               <hr style={{ width: '50%', margin: '0 auto' }}></hr>
-              <p><em>That's really quite a shame, but we really don't care</em></p>
+              <p><em>Don't be such a snowflake, they're just words!</em></p>
             </th>
           </tr>
         </table>
